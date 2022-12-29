@@ -10,6 +10,23 @@
     <link rel="preload" href="fonts/cormorant-v11-latin_cyrillic-700.woff2" as="font"
           type="font/woff2" crossorigin>
 
+    <style>
+      :root {
+        --main-color: #fff;
+        --second-color: #262626;
+        --one-color: #006E55;
+        --two-color: #00654E;
+        --three-color: #005844;
+        --main-bg-color: #005844;
+        --second-bg-color: #C0B487;
+        --trigger-color: #E5AB39;
+        --url-features-one: url("/images/tree.svg");
+        --url-features-two: url("/images/christmas-decorations.svg");
+        --url-features-three: url("/images/flowers.svg");
+        --url-features-four: url("/images/delivery-truck.svg");
+      }
+    </style>
+
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/default.css">
     <link rel="stylesheet" href="style/header.css">
@@ -17,8 +34,11 @@
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="style/burger.css">
     <link rel="stylesheet" href="style/hero.css">
-
-
+    <link rel="stylesheet" href="style/features.css">
+    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/pay.css">
+    <link rel="stylesheet" href="style/option-pay.css">
+    <link rel="stylesheet" href="style/decoration.css">
 </head>
 <body>
     <header class="header">
@@ -76,30 +96,107 @@
 
         <section class="features">
             <div class="container">
-
+                <h2 class="visually-hidden">Преимущества</h2>
+                <ul class="features__list">
+                    <li class="features__item features__item_one">Пушистые и&nbsp;ароматные ёлочки</li>
+                    <li class="features__item features__item_two">Набор ёлочных украшений в&nbsp;подарок</li>
+                    <li class="features__item features__item_three">Ёлочки сохранят свежесть надолго</li>
+                    <li class="features__item features__item_four">Доставим ёлочку за&nbsp;наш счет</li>
+                </ul>
             </div>
         </section>
 
         <section class="product" id="one">
-            <div class="container">
-
+            <div class="container product__container">
+                <div class="product__content">
+                    <h1 class="product__title">Пихта Фразера</h1>
+                    
+                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+                    
+                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+                    
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера">
             </div>
         </section>
 
         <section class="product" id="two">
-            <div class="container">
+            <div class="container product__container">
+                <div class="product__content">
+                    <h1 class="product__title">Пихта Фразера</h1>
 
+                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+
+                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера">
             </div>
         </section>
 
         <section class="product" id="three">
-            <div class="container">
+            <div class="container product__container">
+                <div class="product__content">
+                    <h1 class="product__title">Пихта Фразера</h1>
 
+                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+
+                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+
+                    <div class="product__button-wrapper">
+                        <button class="product__button product__button_order">Заказать</button>
+                        <a class="product__button product__button_more" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <img class="product__picture" src="images/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера">
             </div>
         </section>
 
         <section class="pay">
             <div class="container">
+                <h2 class="pay__title">Как можно оплатить</h2>
+                
+                <ul class="pay__list">
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <img class="option-pay__picture" src="images/cards.svg" alt="Платежные системы">
+                            </div>
+                            <h3 class="option-pay__title">Банковской картой</h3>
+                            <p class="option-pay__description">Visa/Mastercard или PayPal из любой страны</p>
+                        </article>
+                    </li>
+
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <svg class="logo option-pay__picture" viewBox="0 0 164 76">
+                                    <use xlink:href="#logo" />
+                                </svg>
+                            </div>
+                            <h3 class="option-pay__title">Беспроцентная рассрочка от&nbsp;нас</h3>
+                            <p class="option-pay__description">Мы делим платеж на 2 части. Первую часть вы оплачиваете сразу, вторую через 15 дней после получения дерева</p>
+                        </article>
+                    </li>
+
+                    <li class="pay__item">
+                        <article class="pay__option_pay option-pay">
+                            <div class="option-pay__picture-wrapper">
+                                <img class="option-pay__picture" src="images/tinkoff.svg" alt="Логотип банка Тинькофф">
+                            </div>
+                            <h3 class="option-pay__title">Беспроцентная рассрочка от&nbsp;Тинькофф</h3>
+                            <p class="option-pay__description">Рассрочка на 3 месяца без первоначального платежа</p>
+                        </article>
+                    </li>
+                </ul>
 
             </div>
         </section>
@@ -124,5 +221,38 @@
             </g>
         </symbol>
     </svg>
+
+    <div class="garland"></div>
+
+    <script>
+        const garland = document.querySelector('.garland');
+
+        let order = 1;
+
+        setInterval(() => {
+        	switch (order) {
+        		case 1:
+        			garland.classList.add('garland_two');
+					garland.classList.remove('garland_one');
+					order = 2;
+					break;
+                case 2:
+                    garland.classList.add('garland_three');
+                    garland.classList.remove('garland_two');
+                    order = 3
+                    break;
+                case 3:
+                    garland.classList.add('garland_four');
+                    garland.classList.remove('garland_three');
+                    order = 4;
+                    break;
+                case 4:
+                    garland.classList.add('garland_one');
+                    garland.classList.remove('garland_four');
+                    order = 1;
+                    break;
+			}
+        }, 700)
+    </script>
 </body>
 </html>
