@@ -3,7 +3,7 @@ body {
   position: relative;
 }
 
-body:after {
+/*body:after {
   content: '';
   position: absolute;
   inset: 0;
@@ -12,7 +12,7 @@ body:after {
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 1000;
-}
+}*/
 
 .garland {
   position: absolute;
