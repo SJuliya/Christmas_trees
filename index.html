@@ -40,7 +40,11 @@
     <link rel="stylesheet" href="style/option-pay.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/decoration.css">
+    <link rel="stylesheet" href="style/overlay.css">
+    <link rel="stylesheet" href="style/modal.css">
 
+    <script src="js/burger.js" defer></script>
+    <script src="js/modal.js" defer></script>
     <script src="js/decoration.js" defer></script>
     <script src="snow/snow.js" defer></script>
 </head>
@@ -58,19 +62,19 @@
             <nav class="header__navigation navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Пихта Фразера</a>
+                        <a href="#one" class="navigation__link">Пихта Фразера</a>
                     </li>
 
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Русская ель</a>
+                        <a href="#two" class="navigation__link">Русская ель</a>
                     </li>
 
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Сибирская пихта</a>
+                        <a href="#three" class="navigation__link">Сибирская пихта</a>
                     </li>
 
                     <li class="navigation__item">
-                        <a href="" class="navigation__link">Как оплатить?</a>
+                        <a href="#pay" class="navigation__link">Как оплатить?</a>
                     </li>
                 </ul>
             </nav>
@@ -120,7 +124,7 @@
                     <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
                     
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Пихта Фразера">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
@@ -131,40 +135,40 @@
         <section class="product" id="two">
             <div class="container product__container">
                 <div class="product__content">
-                    <h1 class="product__title">Пихта Фразера</h1>
+                    <h1 class="product__title">Русская ель</h1>
 
-                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+                    <p class="product__features">Русская ель — наиболее традиционная разновидность рождественских деревьев, которую можно встретить в большинстве советских фильмов про новый год</p>
 
-                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+                    <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
 
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Русская ель">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
-                <img class="product__picture" src="images/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера">
+                <img class="product__picture" src="images/russian-spruce.jpg" width="630" height="590" alt="Русская ель">
             </div>
         </section>
 
         <section class="product" id="three">
             <div class="container product__container">
                 <div class="product__content">
-                    <h1 class="product__title">Пихта Фразера</h1>
+                    <h1 class="product__title">Сибирская пихта</h1>
 
-                    <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+                    <p class="product__features">Пихта сибирская является одной из самых красивых и ароматных хвойных пород и ее часто можно встретить в парках и садах</p>
 
-                    <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+                    <p class="product__description">Хвоя Сибирской пихты в отличие от еловой крупнее, зеленее, совершенно неколючая и мягкая как трава</p>
 
                     <div class="product__button-wrapper">
-                        <button class="product__button product__button_order">Заказать</button>
+                        <button class="product__button product__button_order" data-order="Сибирская пихта">Заказать</button>
                         <a class="product__button product__button_more" href="#">Подробнее</a>
                     </div>
                 </div>
-                <img class="product__picture" src="images/fraser-fir.jpg" width="630" height="590" alt="Пихта Фразера">
+                <img class="product__picture" src="images/siberia-fir.jpg" width="630" height="590" alt="Сибирская пихта">
             </div>
         </section>
 
-        <section class="pay">
+        <section class="pay" id="pay">
             <div class="container">
                 <h2 class="pay__title">Как можно оплатить</h2>
                 
@@ -269,6 +273,38 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay overlay_order">
+        <div class="modal">
+            <button class="modal__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor" />
+                </svg>
+            </button>
+
+            <h2 class="modal__title">Оформить заказ</h2>
+
+            <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <label class="modal__label">
+                    <span class="modal__label-text">ФИО</span>
+                    <input class="modal__input" required name="fio" type="text" placeholder="Введите ваше ФИО">
+                </label>
+
+                <label class="modal__label modal__label_last">
+                    <span class="modal__label-text">Телефон</span>
+                    <input class="modal__input" required name="phone" type="tel" placeholder="Введите ваш номер телефона">
+                </label>
+
+                <input class="modal__order" type="hidden" name="order">
+
+                <button class="modal__button">Заказать звонок</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay overlay_consultation">
+
+    </div>
 
     <svg class="hide">
         <symbol id="logo" width="164" height="76" fill="none" xmlns="http://www.w3.org/2000/svg">
