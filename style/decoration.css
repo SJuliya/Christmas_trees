@@ -16,7 +16,7 @@ body {
 
 .garland {
   position: absolute;
-  top: 0;
+  top: 66px;
   left: 0;
   right: 0;
   height: 36px;
@@ -39,4 +39,16 @@ body {
 
 .garland_four {
   background-position: 0 -108px;
+}
+
+@media (max-width: 1200px) {
+  .garland {
+    top: 61px;
+  }
+}
+
+@media (max-width: 768px) {
+  .garland {
+    top: 58px;
+  }
 }

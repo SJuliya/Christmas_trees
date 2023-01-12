@@ -1,4 +1,10 @@
-const createSnow = (n) => {
+function getRandomIntInclusive(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min) + min);
+}
+
+const createSnow = (min, max, saturation) => {
 	const style = document.createElement('style');
 
 	style.textContent = `
@@ -35,7 +41,7 @@ const createSnow = (n) => {
 		const snowItem = document.createElement('div');
 		snowItem.classList.add('snow');
 
-		const time = Math.round(((Math.random() * 10) + 2) * n * 1000);
+		const time = Math.round(getRandomIntInclusive(min, max) * 1000);
 
 		snowItem.style.cssText = `
 		left: ${Math.random() * document.documentElement.clientWidth}px;
@@ -56,7 +62,11 @@ const createSnow = (n) => {
 		}, time);
 	}
 
-	setInterval(createSnowItem, 500);
+	if (saturation > 500) {
+		saturation = 500;
+	}
+
+	setInterval(createSnowItem, 600 - saturation);
 }
 
-createSnow(1);
+createSnow(5, 15, 50);

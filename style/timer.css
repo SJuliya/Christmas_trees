@@ -1,0 +1,55 @@
+.timer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1030;
+}
+
+body {
+    padding-top: 66px;
+}
+
+@media (max-width: 1200px) {
+    body {
+        padding-top: 61px;
+    }
+
+    .timer {
+        height: 61px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 58px;
+    }
+
+    .timer {
+        height: 58px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 580px) {
+    .timer {
+        font-size: 12px;
+    }
+
+    .t__count {
+        display: block;
+    }
+}
